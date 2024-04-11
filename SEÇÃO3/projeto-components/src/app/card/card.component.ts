@@ -4,9 +4,9 @@ interface IPlano {
   infos: Iinfos;
 }
 
-interface Iinfos{
-  tipo:string,
-  preco:number
+interface Iinfos {
+  tipo: string;
+  preco: number;
 }
 
 @Component({
@@ -15,7 +15,7 @@ interface Iinfos{
   styleUrl: './card.component.scss',
 })
 export class CardComponent {
-  plano:IPlano = {
+  plano: IPlano = {
     infos: {
       tipo: 'Simples',
       preco: 100.0,
