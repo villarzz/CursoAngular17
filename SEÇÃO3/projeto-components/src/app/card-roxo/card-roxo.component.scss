@@ -2,7 +2,7 @@
 
 .card-roxo {
   max-width: 350px;
-  background-color: #ede1ff;
+  background-color: rgb(226, 109, 226);
   border-radius: 25px;
   padding: 30px;
   font-family: "Popins", sans-serif;
@@ -19,4 +19,8 @@
     font-weight: 600;
     font-size: 40px;
   }
+}
+
+:host ::ng-deep .card-cancel-button{
+  background-color: #be94fd !important
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 interface IPlano {
   infos: Iinfos;
@@ -13,6 +13,7 @@ interface Iinfos {
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class CardComponent {
   plano: IPlano = {
