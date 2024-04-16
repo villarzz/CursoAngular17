@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AttributeBidingComponent } from './attribute-biding/attribute-biding.component';
 import { StyleBidingComponent } from './style-biding/style-biding.component';
+import { ClassBidingComponent } from './class-biding/class-biding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AttributeBidingComponent,
-    StyleBidingComponent
+    StyleBidingComponent,
+    ClassBidingComponent
   ],
   imports: [
     BrowserModule,
