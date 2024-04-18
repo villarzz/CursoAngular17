@@ -1,24 +1,15 @@
-import { Component } from '@angular/core';
-
-interface IPlano {
-  infos: Iinfos;
-}
-
-interface Iinfos {
-  tipo: string;
-  preco: number;
-}
-
+import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  styleUrl: './card.component.scss',
 })
 export class CardComponent {
-  plano: IPlano = {
-    infos: {
-      tipo: 'Simples',
-      preco: 100.0,
-    },
-  };
+  @Input() planType: string = '';
+  @Input({ required: true }) planPrice: number = 0;
+
+  buttonClicked(evento: boolean) {
+    console.log(evento);
+    console.log('clicaram no meu filho');
+  }
 }
