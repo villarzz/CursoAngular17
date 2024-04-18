@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'Decorators';
   cardPlanType = 'Simples';
   cardPlanPrice = 100;
+
+  handlePlanType(planType: string) {
+    this.cardPlanType = planType;
+  }
 }
