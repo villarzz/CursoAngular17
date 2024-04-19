@@ -15,8 +15,8 @@ export class AppComponent {
 
   listPessoas = [
     { name: 'Hugo Vilar', idade: 19 },
-    { name: 'Jorge Freitas', idade: 26 },
-    { name: 'Felipe Freitas', idade: 26 },
-    { name: 'João do taligado', idade: 31 },
+    { name: 'Jorge Freitas', idade: 20 },
+    { name: 'Felipe Freitas', idade: 21 },
+    { name: 'João do taligado', idade: 22 },
   ];
 }
