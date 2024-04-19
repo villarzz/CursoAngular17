@@ -9,7 +9,7 @@ export class ButtonComponent {
   @Output('clicked') buttonClickedEmitt = new EventEmitter<void>();
   @Input('disabled') isDisabled = false;
   @Input({ required: true, alias: 'text' }) buttonText: string = '';
-  @Input({ required: true, alias: 'style' }) buttonStyle: 'white' | 'purple' = 'white';
+  @Input({ required: true, alias: 'style' }) buttonStyle: 'white' | 'orange' = 'white';
 
   onButtonClicked() {
     this.buttonClickedEmitt.emit();
