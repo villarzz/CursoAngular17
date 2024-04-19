@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  buttonClicked(){
-    console.log('clicaram no meu filho');
+  onCardButtonClicked(){
+    console.log('clicaram no filho do meu filho');
   }
 
 }

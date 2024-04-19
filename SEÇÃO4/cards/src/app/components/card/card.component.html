@@ -13,5 +13,6 @@
   <app-button
     [text]="'Adquirir'"
     [style]="cardStyle === 'orange' ? 'white' : 'orange'"
+    (clicked)="onButtonClicked()"
   ></app-button>
 </div>
