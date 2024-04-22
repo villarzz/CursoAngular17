@@ -10,7 +10,7 @@ export class AppComponent {
 
   selectPerson(index: number) {
     console.log(index);
-    this.personSelectedIndex = index
+    this.personSelectedIndex = index;
   }
 
   listPessoas = [

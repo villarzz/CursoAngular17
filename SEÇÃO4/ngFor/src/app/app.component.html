@@ -1,12 +1,11 @@
 <div class="list">
-  <div
-    class="item"
+  <app-person
     *ngFor="let person of listPessoas; let i = index; let isOdd = odd"
-    [class.item--odd]="isOdd"
-    [class.item--highlighted]="personSelectedIndex == i"
-    (click)="selectPerson(i)"
-  >
-    <p class="item__name">{{ i + 1 }} - {{ person.name }}</p>
-    <p class="item__age">{{ person.idade }} anos</p>
-  </div>
+    [personAge]="person.idade"
+    [personName]="person.name"
+    [personIndex]="i"
+    [isOdd]="isOdd"
+    [isSelected]="personSelectedIndex === i"
+    (personSelected)="selectPerson($event)"
+  ></app-person>
 </div>
