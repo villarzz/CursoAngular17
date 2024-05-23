@@ -1,4 +1,4 @@
-export interface Status {
+export interface IStatus {
   online: boolean;
   veririficado: boolean;
   assinaturaAtiva: boolean;

@@ -1,4 +1,5 @@
-import { IAddress } from "./address.interface";
+import { IStatus } from './status.interface';
+import { IAddress } from './address.interface';
 
 export interface IUser {
   nome: string;
@@ -10,14 +11,5 @@ export interface IUser {
   ativo: boolean;
   funcao: string;
   dataCadastro: string;
-  status: Status;
+  status: IStatus;
 }
-
-export interface Status {
-  online: boolean;
-  veririficado: boolean;
-  assinaturaAtiva: boolean;
-  ultimoAcesso: string;
-}
-
-
