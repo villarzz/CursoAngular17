@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
+import { UserDetailsComponent } from './user-details/user-details.component';
 import { AngularMaterialModule } from '../angular-material/angular-material/angular-material.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [UserDetailsComponent],
   imports: [AngularMaterialModule],
-  exports: [],
+  exports: [UserDetailsComponent],
 })
 export class ComponentsModule {}
