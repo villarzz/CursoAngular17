@@ -60,7 +60,7 @@ export const UsersList: IUser[] = [
       pais: 'brasil',
     },
     telefone: '61981762371',
-    ativo: true,
+    ativo: false,
     funcao: 'dev',
     dataCadastro: '2024-01-15T12:00:00.000Z',
     status: {
@@ -106,7 +106,7 @@ export const UsersList: IUser[] = [
       pais: 'brasil',
     },
     telefone: '61981762371',
-    ativo: true,
+    ativo: false,
     funcao: 'dev',
     dataCadastro: '2023-02-15T12:00:00.000Z',
     status: {
