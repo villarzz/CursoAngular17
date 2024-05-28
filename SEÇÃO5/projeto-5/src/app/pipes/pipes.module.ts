@@ -4,6 +4,6 @@ import { AddressPipe } from './address.pipe';
 
 @NgModule({
   declarations: [PhonePipe, AddressPipe],
-  exports: [PhonePipe],
+  exports: [PhonePipe, AddressPipe],
 })
 export class PipesModule {}
