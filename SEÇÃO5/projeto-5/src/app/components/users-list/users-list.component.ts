@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
 import { UsersList } from '../../data/user-list';
 import { IUser } from '../../interfaces/user/user.interface';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-users-list',
@@ -8,10 +8,12 @@ import { IUser } from '../../interfaces/user/user.interface';
   styleUrl: './users-list.component.scss',
 })
 export class UsersListComponent {
-  usersList: IUser[] = UsersList;
+  @Input({ required: true }) usersList: IUser[] = UsersList;
   displayedColumns = ['name', 'date', 'status'];
 
-  onUserSelected(user: IUser){
+  @Output('userSelected') userSelectedEmit = new EventEmitter<IUser>();
 
+  onUserSelected(user: IUser) {
+    this.userSelectedEmit.emit(user);
   }
 }
