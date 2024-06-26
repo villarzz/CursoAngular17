@@ -1,6 +1,6 @@
+import { UsersList } from './data/user-list';
 import { Component, OnInit } from '@angular/core';
 import { IUser } from './interfaces/user/user.interface';
-import { UsersList } from './data/user-list';
 import { IFilterOptions } from './interfaces/filter-options.interface';
 
 @Component({
@@ -12,11 +12,13 @@ export class AppComponent implements OnInit{
   title = 'projeto-5';
   usersList: IUser[] = [];
   showUserDetails = false;
+  usersListFiltered: IUser[] = [];
   userSelected: IUser = {} as IUser;
 
   ngOnInit() {
     setTimeout(() => {
       this.usersList = UsersList;
+      this.usersListFiltered = this.usersList;
     }, 1);
   }
 
@@ -26,6 +28,26 @@ export class AppComponent implements OnInit{
   }
 
   onFilter(filterOptions:IFilterOptions){
-    console.log(filterOptions);
+    this.usersListFiltered = this.filterUsersList(filterOptions, this.usersList);
+  }
+
+  filterUsersList(filterOptions: IFilterOptions, usersList: IUser[]): IUser[] {
+    let filteredList:IUser[] = [];
+
+    filteredList = this.filteredUsersListByName(filterOptions.name, usersList);
+
+    return filteredList;
+  }
+
+  filteredUsersListByName(name: string | undefined, usersList: IUser[]): IUser[] {
+    const NAME_NOT_TYPPED = name === undefined;
+
+    if (NAME_NOT_TYPPED) {
+      return usersList;
+    }
+
+    const filteredList = usersList.filter((user) => user.nome.toLowerCase().includes(name.toLowerCase()));
+
+    return filteredList;
   }
 }
