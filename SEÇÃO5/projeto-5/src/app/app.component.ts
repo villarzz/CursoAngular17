@@ -35,7 +35,19 @@ export class AppComponent implements OnInit{
     let filteredList:IUser[] = [];
 
     filteredList = this.filteredUsersListByName(filterOptions.name, usersList);
+    filteredList = this.filteredUsersListByStatus(filterOptions.status, filteredList);
 
+    return filteredList;
+  }
+
+  filteredUsersListByStatus(status: boolean | undefined, usersList: IUser[]): IUser[] {
+    const STATUS_NOT_SELECTED = status === undefined;
+
+    if (STATUS_NOT_SELECTED) {
+      return usersList;
+    }
+
+    const filteredList = usersList.filter((user) => user.ativo === status);
     return filteredList;
   }
 
