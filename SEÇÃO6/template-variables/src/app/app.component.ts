@@ -1,14 +1,23 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit,Component,ElementRef,OnInit,ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('meuInput') meuInput!: ElementRef<HTMLInputElement>;
 
-  updateInputText(){
-    this.meuInput.nativeElement.value = 'Texto atualizado!';
+  constructor() {
+    console.log('constructor');
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit');
+  }
+
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit');
+    this.meuInput.nativeElement.focus();
   }
 }
