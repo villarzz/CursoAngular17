@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +6,5 @@ import { ChangeDetectorRef, Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'template-variables';
 
-  constructor(private _cdRef: ChangeDetectorRef) {}
-
-  changeDetection() {
-    this._cdRef.detectChanges();
-  }
 }
