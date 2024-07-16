@@ -1,10 +1,10 @@
 <!-- <app-no-directive></app-no-directive>
-<app-with-directive></app-with-directive> -->
+<app-with-directive></app-with-directive>
 
-<!-- <button disabled>My button</button>
+<button disabled>My button</button>
 <button [attr.disabled]="false">My button attr</button>
 <button [disabled]="false">My button prop</button>
-<button appDisabled>My button with directive</button> -->
+<button appDisabled>My button with directive</button>
 
 <p style="background-color: orange; color: white">Paragraph</p>
 
@@ -14,4 +14,15 @@
 
 <p [style]="{backgroundColor: 'orange', color: 'white',}">Prop Obj</p>
 
-<p appStyle>Directive</p>
+<p appStyle>Directive</p> -->
+
+<p class="my-text">Text</p>
+
+<p [attr.class]="'my-text'">Attr text</p>
+
+<p [className]="'my-text my-size'">Prop ClassName text</p>
+
+<p [class]="{
+  'my-text': true,
+  'my-size': true,
+}">Prop Class text</p>
