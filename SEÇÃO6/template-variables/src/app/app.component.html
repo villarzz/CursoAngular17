@@ -1,1 +1,5 @@
-Meu input: <input type="text" #meuInput />
+@for(btn of buttonsList; track btn){
+  <button #meuButton (click)="changeColor($event)">{{ btn }}</button>
+}
+
+<button (click)="resetButtons($event)">Resetar</button>

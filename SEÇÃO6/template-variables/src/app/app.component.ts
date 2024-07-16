@@ -1,23 +1,32 @@
-import { AfterViewInit,Component,ElementRef,OnInit,ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit, AfterViewInit {
-  @ViewChild('meuInput') meuInput!: ElementRef<HTMLInputElement>;
+export class AppComponent implements AfterViewInit{
+  buttonsList = [
+    'Botão 1',
+    'Botão 2',
+    'Botão 3',
+  ];
 
-  constructor() {
-    console.log('constructor');
+  @ViewChildren('meuButton') buttons!: QueryList<ElementRef<HTMLButtonElement>>;
+  ngAfterViewInit(){
+    console.log(this.buttons.toArray());
   }
 
-  ngOnInit(): void {
-    console.log('ngOnInit');
+  changeColor(event: Event){
+    const btnElement = event.target as HTMLButtonElement;
+    btnElement.style.backgroundColor = 'orange';
+    btnElement.style.color = 'white';
   }
 
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit');
-    this.meuInput.nativeElement.focus();
+  resetButtons(event: Event){
+    this.buttons.forEach(button => {
+      button.nativeElement.style.backgroundColor = '';
+      button.nativeElement.style.color = 'black';
+    })
   }
 }
