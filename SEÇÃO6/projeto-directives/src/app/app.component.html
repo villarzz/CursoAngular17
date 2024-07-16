@@ -1,2 +1,7 @@
-<app-no-directive></app-no-directive>
-<app-with-directive></app-with-directive>
+<!-- <app-no-directive></app-no-directive>
+<app-with-directive></app-with-directive> -->
+
+<button disabled>My button</button>
+<button [attr.disabled]="false">My button attr</button>
+<button [disabled]="false">My button prop</button>
+<button appDisabled>My button with directive</button>

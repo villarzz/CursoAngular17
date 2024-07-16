@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DisabledDirective } from './directives/disabled.directive';
 import { HighlightDirective } from './directives/highlight.directive';
 import { NoDirectiveComponent } from './no-directive/no-directive.component';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser'
@@ -9,6 +10,7 @@ import { WithDirectiveComponent } from './with-directive/with-directive.componen
 @NgModule({
   declarations: [
     AppComponent,
+    DisabledDirective,
     HighlightDirective,
     NoDirectiveComponent,
     WithDirectiveComponent
