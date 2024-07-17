@@ -9,6 +9,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { NoDirectiveComponent } from './no-directive/no-directive.component';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser'
 import { WithDirectiveComponent } from './with-directive/with-directive.component';
+import { InputBackgroundDirective } from './directives/input-background.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { WithDirectiveComponent } from './with-directive/with-directive.componen
     DisabledDirective,
     HighlightDirective,
     NoDirectiveComponent,
-    WithDirectiveComponent
+    WithDirectiveComponent,
+    InputBackgroundDirective,
   ],
   imports: [
     BrowserModule,
