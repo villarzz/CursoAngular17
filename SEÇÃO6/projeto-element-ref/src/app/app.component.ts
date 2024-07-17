@@ -26,4 +26,11 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.divEl.nativeElement.style.backgroundColor = 'orange';
     this.divEl.nativeElement.textContent = 'I am a div element';
   }
+
+  createElement(){
+    const newDiv = document.createElement('div');
+    newDiv.textContent = 'I am a new div';
+    newDiv.classList.add('bg-red');
+    this._elRef.nativeElement.appendChild(newDiv);
+  }
 }
