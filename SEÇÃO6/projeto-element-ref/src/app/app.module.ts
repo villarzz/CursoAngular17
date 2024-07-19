@@ -3,13 +3,17 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { FocusSecondInputDirective } from './directives/focus-second-input.directive';
+import { XssComponent } from './xss/xss.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FocusSecondInputDirective
+    XssComponent,
+    FocusSecondInputDirective,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],
