@@ -27,7 +27,7 @@
       }
     }
 
-    .item__header__client{
+    .item__header__client {
       padding: 10px;
       display: flex;
       border-radius: 10px 10px 0px 0px;
@@ -49,23 +49,23 @@
       padding: 30px;
       border-radius: 0px 0px 10px 10px;
 
-      .item__content__description{
+      .item__content__description {
         display: flex;
         padding: 15px;
         flex-direction: row;
         justify-content: space-between;
         border-bottom: 2px solid #8b8b8b;
       }
-      .item__content__description__noborder{
+      .item__content__description__noborder {
         display: flex;
         padding: 15px;
         flex-direction: row;
         justify-content: space-between;
       }
 
-      .item__content__sumary{
+      .item__content__sumary {
         margin-top: 30px;
-        .item__content__total{
+        .item__content__total {
           display: flex;
           padding: 15px;
           flex-direction: row;

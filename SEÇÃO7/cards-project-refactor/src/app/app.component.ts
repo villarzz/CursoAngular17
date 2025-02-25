@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { BalanceCardComponent } from './balance-card/balance-card.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [BalanceCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
