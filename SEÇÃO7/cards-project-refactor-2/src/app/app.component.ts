@@ -90,4 +90,22 @@ export class AppComponent {
       showLine: false,
     },
   ];
+
+  lastCardContent: CardContent[] = [
+    {
+      title: 'Nome',
+      value: 'Hugo Vilar de Oliveira',
+      showLine: true,
+    },
+    {
+      title: 'Idade',
+      value: '26 anos',
+      showLine: true,
+    },
+    {
+      title: 'Renda Mensal',
+      value: 'R$ -1000,00',
+      showLine: false,
+    },
+  ]
 }

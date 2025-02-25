@@ -1,5 +1,5 @@
 <div class="ca-c-card">
-  <div class="ca-c-card__header card__header">
+  <div class="ca-c-card__header card__header" [ngClass]="{'ca-c-card__header--bg-blue': backGroundColor === 'blue'}">
     <div class="card__header-title">
       <img class="card__header-icon" [src]="icon" alt="Icone" />
       <h1>{{ title }}</h1>
