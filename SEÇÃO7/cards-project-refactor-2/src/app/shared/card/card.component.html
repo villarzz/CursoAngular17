@@ -1,0 +1,16 @@
+<div class="ca-c-card">
+  <div class="ca-c-card__header card__header">
+    <div class="card__header-title">
+      <img
+        class="card__header-icon"
+        [src]=icon
+        alt="Icone Saldos"
+      />
+      <h1>{{title}}</h1>
+    </div>
+    @if(value){
+      <p>R${{value}},00</p>
+    }
+  </div>
+  <div class="ca-c-card__content"></div>
+</div>
