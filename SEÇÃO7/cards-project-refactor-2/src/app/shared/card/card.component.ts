@@ -10,11 +10,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './card.component.scss',
 })
 export class CardComponent {
-  @Input() icon = '';
-  @Input() title = '';
   @Input() value = '';
-  @Input() hasCard = false;
   @Input() backGroundColor = '';
   @Input() cardAmount!: CardContent[];
+  @Input({ required: true }) icon = '';
+  @Input({ required: true }) title = '';
   @Input() cardContent: CardContent[] = [];
+  @Input({ required: true }) hasCard = false;
 }
