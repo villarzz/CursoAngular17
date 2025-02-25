@@ -11,6 +11,7 @@ import { CardContent } from './interfaces/cardContent';
 })
 export class AppComponent {
   title = 'cards-project-refactor';
+
   firstCardContent: CardContent[] = [
     {
       title: 'Conta Corrente',

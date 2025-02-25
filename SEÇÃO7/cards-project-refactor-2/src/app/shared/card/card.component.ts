@@ -12,6 +12,7 @@ export class CardComponent {
   @Input() icon = '';
   @Input() title = '';
   @Input() value = '';
+  @Input() hasCard = false;
   @Input() cardAmount!: CardContent[];
   @Input() cardContent: CardContent[] = [];
 }

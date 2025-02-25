@@ -6,14 +6,23 @@
       [value]="'100'"
       [cardContent]="firstCardContent"
       [cardAmount]="firstCardAmount"
+      [hasCard]="true"
     />
   </div>
   <div class="item">
-    <app-card [icon]="'../assets/icons/icon-credit-card.png'" [title]="'Cartão de Crédito'" [cardContent]="secondCardContent"/>
-    <!-- <app-credit-card /> -->
+    <app-card
+      [icon]="'../assets/icons/icon-credit-card.png'"
+      [title]="'Cartão de Crédito'"
+      [cardContent]="secondCardContent"
+      [hasCard]="true"
+    />
   </div>
   <div class="item">
-    <!-- <app-debit-card /> -->
+    <app-card
+      [icon]="'../assets/icons/icon-debit-card.png'"
+      [title]="'Cartão de Débito'"
+      [hasCard]="false"
+    />
   </div>
   <div class="item">
     <!-- <app-client-infos-card /> -->

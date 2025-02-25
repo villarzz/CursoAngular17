@@ -9,27 +9,31 @@
     }
   </div>
   <div class="ca-c-card__content">
-    @for (c of cardContent; track $index) {
-      <div class="card__content-item">
-        <p>{{ c.title }}</p>
-        <p>{{ c.value }}</p>
-      </div>
-      @if(c.showLine){
-        <div class="ca-u-line"></div>
+    @if(hasCard){
+      @for (c of cardContent; track $index) {
+        <div class="card__content-item">
+          <p>{{ c.title }}</p>
+          <p>{{ c.value }}</p>
+        </div>
+        @if(c.showLine){
+          <div class="ca-u-line"></div>
+        }
       }
-    }
-    @if(cardAmount){
-    <div class="card__content-summary">
-      <div class="card__content-item">
-        <p>SALDO TOTAL</p>
-        <p>R$ 1000,00</p>
-      </div>
+      @if(cardAmount){
+      <div class="card__content-summary">
+        <div class="card__content-item">
+          <p>SALDO TOTAL</p>
+          <p>R$ 1000,00</p>
+        </div>
 
-      <div class="card__content-item">
-        <p>LIVRE PARA MOVIMENTAÇÃO</p>
-        <p>R$ 1000,00</p>
+        <div class="card__content-item">
+          <p>LIVRE PARA MOVIMENTAÇÃO</p>
+          <p>R$ 1000,00</p>
+        </div>
       </div>
-    </div>
+      }
+    } @else {
+      <p>Esse cliente não possui cartão de débito</p>
     }
   </div>
 </div>
