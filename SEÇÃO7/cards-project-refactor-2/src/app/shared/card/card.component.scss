@@ -20,5 +20,22 @@
   &__header-icon {
     width: 40px;
     margin-right: 10px;
-}
+  }
+
+  &__content-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+    p:nth-of-type(1) {
+      margin-right: auto;
+    }
+  }
+
+  &__content-summary {
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0px 12px;
+  }
 }

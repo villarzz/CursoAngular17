@@ -1,16 +1,33 @@
 <div class="ca-c-card">
   <div class="ca-c-card__header card__header">
     <div class="card__header-title">
-      <img
-        class="card__header-icon"
-        [src]=icon
-        alt="Icone Saldos"
-      />
-      <h1>{{title}}</h1>
+      <img class="card__header-icon" [src]="icon" alt="Icone Saldos" />
+      <h1>{{ title }}</h1>
     </div>
     @if(value){
-      <p>R${{value}},00</p>
+    <p>R${{ value }},00</p>
     }
   </div>
-  <div class="ca-c-card__content"></div>
+  <div class="ca-c-card__content">
+    @for (c of cardContent; track $index) {
+    <div class="card__content-item">
+      <p>{{ c.title }}</p>
+      <p>{{ c.value }}</p>
+    </div>
+    <div class="ca-u-line"></div>
+    }
+    @if(cardAmount){
+    <div class="card__content-summary">
+      <div class="card__content-item">
+        <p>SALDO TOTAL</p>
+        <p>R$ 1000,00</p>
+      </div>
+
+      <div class="card__content-item">
+        <p>LIVRE PARA MOVIMENTAÇÃO</p>
+        <p>R$ 1000,00</p>
+      </div>
+    </div>
+    }
+  </div>
 </div>
