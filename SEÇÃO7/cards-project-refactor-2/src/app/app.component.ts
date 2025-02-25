@@ -105,6 +105,11 @@ export class AppComponent {
     {
       title: 'Renda Mensal',
       value: 'R$ -1000,00',
+      showLine: true,
+    },
+    {
+      title: 'Nacionalidade',
+      value: 'Brasileiro',
       showLine: false,
     },
   ]
