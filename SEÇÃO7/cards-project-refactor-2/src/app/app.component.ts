@@ -60,7 +60,7 @@ export class AppComponent {
       showLine: false,
     },
     {
-      title: 'FELIPE DA SILVA FREITAS',
+      title: 'HUGO VILAR DE OLIVEIRA',
       value: 'MASTERCARD CARD',
       showLine: false,
     },
