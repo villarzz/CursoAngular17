@@ -15,22 +15,27 @@ export class AppComponent {
     {
       title: 'Conta Corrente',
       value: 'R$ 200,00',
+      showLine: true,
     },
     {
       title: 'Conta Corrente Saldo Vinculados',
       value: 'R$ 300,00',
+      showLine: true,
     },
     {
       title: 'Conta Poupança Saldo Vinculados',
       value: 'R$ 400,00',
+      showLine: true,
     },
     {
       title: 'Investimentos com Baixa Automática',
       value: 'R$ 500,00',
+      showLine: true,
     },
     {
       title: 'Investimentos sem Baixa Automática',
       value: 'R$ 500,00',
+      showLine: true,
     },
   ];
 
@@ -38,10 +43,50 @@ export class AppComponent {
     {
       title: 'Saldo Total',
       value: 'R$ 1000,00',
+      showLine: false,
     },
     {
       title: 'Livre para movimentação',
       value: 'R$ 1000,00',
+      showLine: false,
+    },
+  ];
+
+  secondCardContent: CardContent[] = [
+    {
+      title: '1234567891011',
+      value: '',
+      showLine: false,
+    },
+    {
+      title: 'FELIPE DA SILVA FREITAS',
+      value: 'MASTERCARD CARD',
+      showLine: false,
+    },
+    {
+      title: 'Limite de Compra',
+      value: 'R$ 1000,00',
+      showLine: true,
+    },
+    {
+      title: 'Disponível',
+      value: 'R$ 1200,00',
+      showLine: false,
+    },
+    {
+      title: 'Limite de Saque',
+      value: 'R$ 2000,00',
+      showLine: true,
+    },
+    {
+      title: 'Disponível',
+      value: 'R$ 1300,00',
+      showLine: false,
+    },
+    {
+      title: 'Limite TotalUtilizado',
+      value: 'R$ 3000,00',
+      showLine: false,
     },
   ];
 }
