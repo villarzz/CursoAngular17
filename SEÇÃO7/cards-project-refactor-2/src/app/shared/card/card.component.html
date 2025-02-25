@@ -5,7 +5,7 @@
       <h1>{{ title }}</h1>
     </div>
     @if(value){
-    <p>R${{ value }},00</p>
+      <p>R${{ value }},00</p>
     }
   </div>
   <div class="ca-c-card__content">
@@ -20,17 +20,17 @@
         }
       }
       @if(cardAmount){
-      <div class="card__content-summary">
-        <div class="card__content-item">
-          <p>SALDO TOTAL</p>
-          <p>R$ 1000,00</p>
-        </div>
+        <div class="card__content-summary">
+          <div class="card__content-item">
+            <p>SALDO TOTAL</p>
+            <p>R$ 1000,00</p>
+          </div>
 
-        <div class="card__content-item">
-          <p>LIVRE PARA MOVIMENTAÇÃO</p>
-          <p>R$ 1000,00</p>
+          <div class="card__content-item">
+            <p>LIVRE PARA MOVIMENTAÇÃO</p>
+            <p>R$ 1000,00</p>
+          </div>
         </div>
-      </div>
       }
     } @else {
       <p>Esse cliente não possui cartão de débito</p>
