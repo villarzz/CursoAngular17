@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CardComponent } from './card/card.component';
+import { CompTextoComponent } from "./comp-texto/comp-texto.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent, CompTextoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
